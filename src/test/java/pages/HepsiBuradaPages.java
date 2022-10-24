@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class HepsiBuradaPages {
 
     public HepsiBuradaPages() {
@@ -31,4 +33,16 @@ public class HepsiBuradaPages {
 
     @FindBy(xpath = "//button[@name='btnEmailSelect']")
     public WebElement getGirisButonuSon;
+
+    @FindBy (xpath = "//div[@role='combobox']")
+    public WebElement aramaKutusu;
+
+    @FindBy (xpath = "//li[@id='i0']")
+    public WebElement ilkUrun;
+
+    @FindBy (xpath = "//button[@class='add-to-basket button small']")
+    public List<WebElement> sepeteEkleList;
+
+    @FindBy (xpath = "//*[text()='Sepete git']")
+    public WebElement sepeteGitButonu;
 }
