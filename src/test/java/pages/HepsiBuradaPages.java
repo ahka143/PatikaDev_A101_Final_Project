@@ -11,7 +11,7 @@ public class HepsiBuradaPages {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//*[text()='Giriş Yap'])[1]")
+    @FindBy(xpath = "(//span[@class='sf-OldMyAccount-d0xCHLV38UCH5cD9mOXq'])[1]")
     public WebElement girisButonu;
 
     @FindBy(xpath = "(//*[text()='Giriş Yap'])[2]")
@@ -25,4 +25,10 @@ public class HepsiBuradaPages {
 
     @FindBy (xpath = "//*[text()='Kabul Et']")
     public WebElement cerezKabulEt;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordTextBox;
+
+    @FindBy(xpath = "//button[@name='btnEmailSelect']")
+    public WebElement getGirisButonuSon;
 }

@@ -4,6 +4,9 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HepsiBuradaPages;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import static org.testng.Assert.*;
 
 public class Test {
 
@@ -16,7 +19,12 @@ public class Test {
         actions.moveToElement(hepsiBuradaPages.girisButonu).perform();
         hepsiBuradaPages.girisButonu2.click();
         hepsiBuradaPages.userEmail.sendKeys(ConfigReader.getProperty("userEmail"));
-        hepsiBuradaPages.girisButonu3.click();
+        ReusableMethods.jsClick(hepsiBuradaPages.girisButonu3);
+        hepsiBuradaPages.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
+        hepsiBuradaPages.getGirisButonuSon.click();
+        System.out.println(hepsiBuradaPages.girisButonu.getText());
+        assertEquals();
+
 
     }
 

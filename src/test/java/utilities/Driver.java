@@ -3,6 +3,7 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,8 +19,12 @@ public class Driver {
         if (driver==null){
             switch (ConfigReader.getProperty("browser")){
                 case "chrome" :
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--disable-blink-features");
+                    options.addArguments("--disable-blink-features=AutomationControlled");
+                    options.addArguments("--disable-extensions");
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
+                    driver=new ChromeDriver(options);
                     break;
                 case "firefox" :
                     WebDriverManager.firefoxdriver().setup();
