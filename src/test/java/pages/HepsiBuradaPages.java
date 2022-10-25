@@ -45,4 +45,10 @@ public class HepsiBuradaPages {
 
     @FindBy (xpath = "//*[text()='Sepete git']")
     public WebElement sepeteGitButonu;
+
+    @FindBy(xpath = "//h1")
+    public WebElement urunAdiText;
+
+    @FindBy (xpath = "//div[@class='product_name_3Lh3t']")
+    public List<WebElement> sepettekiUrunlerList;
 }
