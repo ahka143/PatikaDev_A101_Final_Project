@@ -1,11 +1,14 @@
 package tests;
 
-import org.apache.logging.log4j.Logger;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.HepsiBuradaPages;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.Log;
 import utilities.ReusableMethods;
 
 import java.util.Set;
@@ -17,27 +20,17 @@ public class KayitliKullanici {
 
     @org.testng.annotations.Test
     public void kayitliKullaniciTest() {
-
         HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
-        Actions actions = new Actions(Driver.getDriver());
-        Driver.getDriver().get(ConfigReader.getProperty("hepsiburadaUrl"));
-        hepsiBuradaPages.cerezKabulEt.click();
-        actions.moveToElement(hepsiBuradaPages.girisButonu).perform();
-        hepsiBuradaPages.girisButonu2.click();
-        hepsiBuradaPages.userEmail.sendKeys(ConfigReader.getProperty("userEmail"));
-        ReusableMethods.jsClick(hepsiBuradaPages.girisButonu3);
-        hepsiBuradaPages.passwordTextBox.sendKeys(ConfigReader.getProperty("userPassword"));
-        hepsiBuradaPages.getGirisButonuSon.click();
 
-        String expectedText = "Hesabım";
-        String actualText = hepsiBuradaPages.girisButonu.getText();
+        HepsiBuradaPages.hepsiBuradaKayitliKullaniciGiris();
+        HepsiBuradaPages.dogrulamaMethodu("Hesabim", hepsiBuradaPages.girisButonu);
+        Log.info("Hesabima girildi");
 
-        assertEquals(actualText, expectedText);
-
-        hepsiBuradaPages.aramaKutusu.click();
-        hepsiBuradaPages.aramaKutusu.sendKeys("kalem", Keys.ENTER);
-        String ilkSayfaWindowHandle = Driver.getDriver().getWindowHandle();
+        HepsiBuradaPages.hepsiBuradaArama("kalem");
+        Log.info("Kalem kelimesi arandi");
         hepsiBuradaPages.ilkUrun.click();
+        String ilkSayfaWindowHandle = Driver.getDriver().getWindowHandle();
+
         Set<String> windowHandlesSet = Driver.getDriver().getWindowHandles();
         for (String each : windowHandlesSet
         ) {
@@ -45,19 +38,20 @@ public class KayitliKullanici {
                 Driver.getDriver().switchTo().window(each);
             }
         }
+
         String urunAdi = hepsiBuradaPages.urunAdiText.getText();
 
         hepsiBuradaPages.sepeteEkleList.get(0).click();
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.sepeteEkleList.get(1), 5);
-        hepsiBuradaPages.sepeteEkleList.get(1).click();
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.sepeteGitButonu, 5);
-        hepsiBuradaPages.sepeteGitButonu.click();
+        HepsiBuradaPages.elemntWaitAndClick(hepsiBuradaPages.sepeteEkleList.get(1));
+
+        hepsiBuradaPages.sepetimButonu.click();
 
         String sepettekiIlkUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(0).getText();
         String sepettekiIkinciUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(1).getText();
 
         assertTrue(sepettekiIlkUrunText.contains(urunAdi) && sepettekiIkinciUrunText.contains(urunAdi));
         Driver.getDriver().quit();
+        Log.info("Cikis yapildi");
 
     }
 

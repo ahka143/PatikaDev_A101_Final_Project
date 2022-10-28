@@ -1,0 +1,5 @@
+2022-10-28 10:46:50 INFO  Log:36 - !!!!!Hesabima girildi!!!!
+2022-10-28 10:47:21 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-10-28 20:39:10 INFO  Log:36 - !!!!!Hesabima girildi!!!!
+2022-10-28 20:39:12 INFO  Log:36 - !!!!!Kalem kelimesi arandi!!!!
+2022-10-28 20:39:38 INFO  Log:36 - !!!!!Cikis yapildi!!!!
