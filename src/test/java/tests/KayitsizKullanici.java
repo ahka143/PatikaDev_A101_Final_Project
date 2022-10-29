@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Test;
 import pages.HepsiBuradaPages;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -13,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 
 public class KayitsizKullanici {
 
-    @org.testng.annotations.Test
+    @Test
     public void kayitsizKullaniciTest() {
 
         HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();

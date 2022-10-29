@@ -1,55 +1,44 @@
 package tests;
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 import pages.HepsiBuradaPages;
-import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.Log;
 import utilities.ReusableMethods;
-
-import java.util.Set;
 
 import static org.testng.Assert.*;
 
 public class KayitliKullanici {
 
 
-    @org.testng.annotations.Test
+    @Test
     public void kayitliKullaniciTest() {
         HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
 
         HepsiBuradaPages.hepsiBuradaKayitliKullaniciGiris();
-        HepsiBuradaPages.dogrulamaMethodu("Hesabim", hepsiBuradaPages.girisButonu);
-        Log.info("Hesabima girildi");
+        Log.info(HepsiBuradaPages.assertEquals(hepsiBuradaPages.girisButonu.getText().equals("Hesabim")));
+        Log.info("Kayitli kullanici hesabina basariyla giris yapildi");
 
         HepsiBuradaPages.hepsiBuradaArama("kalem");
         Log.info("Kalem kelimesi arandi");
-        hepsiBuradaPages.ilkUrun.click();
-        String ilkSayfaWindowHandle = Driver.getDriver().getWindowHandle();
 
-        Set<String> windowHandlesSet = Driver.getDriver().getWindowHandles();
-        for (String each : windowHandlesSet
-        ) {
-            if (each != ilkSayfaWindowHandle) {
-                Driver.getDriver().switchTo().window(each);
-            }
-        }
+        hepsiBuradaPages.ilkUrun.click();
+        Log.info("Ilk urune tiklandi");
+
+        ReusableMethods.switchWindow();
 
         String urunAdi = hepsiBuradaPages.urunAdiText.getText();
-
-        hepsiBuradaPages.sepeteEkleList.get(0).click();
+        HepsiBuradaPages.elemntWaitAndClick(hepsiBuradaPages.sepeteEkleList.get(0));
         HepsiBuradaPages.elemntWaitAndClick(hepsiBuradaPages.sepeteEkleList.get(1));
 
+        String sepettekiIlkUrunText = hepsiBuradaPages.sepeteEkleList.get(0).getText();
+        String sepettekiIkinciUrunText = hepsiBuradaPages.sepeteEkleList.get(1).getText();
+        Log.info("Sepete eklenen urunun texti alindi");
         hepsiBuradaPages.sepetimButonu.click();
-
-        String sepettekiIlkUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(0).getText();
-        String sepettekiIkinciUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(1).getText();
-
-        assertTrue(sepettekiIlkUrunText.contains(urunAdi) && sepettekiIkinciUrunText.contains(urunAdi));
+        Log.info("Sepete Gidildi");
+        Log.info(HepsiBuradaPages.
+                assertEquals(sepettekiIlkUrunText.contains(urunAdi) && sepettekiIkinciUrunText.contains(urunAdi)));
         Driver.getDriver().quit();
         Log.info("Cikis yapildi");
 

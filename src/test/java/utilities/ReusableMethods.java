@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 
 public class ReusableMethods {
@@ -41,6 +42,17 @@ public class ReusableMethods {
             }
         }
         Driver.getDriver().switchTo().window(origin);
+    }
+    public static void switchWindow(){
+
+        String ilkSayfaWindowHandle = Driver.getDriver().getWindowHandle();
+        Set<String> windowHandlesSet = Driver.getDriver().getWindowHandles();
+        for (String each : windowHandlesSet
+        ) {
+            if (each != ilkSayfaWindowHandle) {
+                Driver.getDriver().switchTo().window(each);
+            }
+        }
     }
     //========Hover Over=====//
     public static void hover(WebElement element) {
