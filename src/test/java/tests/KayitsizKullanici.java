@@ -2,7 +2,7 @@ package tests;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-import pages.HepsiBuradaPages;
+import pages.HepsiBuradaAllPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.Log;
@@ -17,37 +17,36 @@ public class KayitsizKullanici {
     @Test
     public void kayitsizKullaniciTest() {
 
-        HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
-        Driver.getDriver().get(ConfigReader.getProperty("hepsiburadaUrl"));
-        Log.info("Ana sayfaya gidildi");
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.aramaKutusu, 10);
-        hepsiBuradaPages.aramaKutusu.click();
-        hepsiBuradaPages.aramaKutusu.sendKeys("kalem", Keys.ENTER);
-        String ilkSayfaWindowHandle = Driver.getDriver().getWindowHandle();
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.ilkUrun, 10);
-        ReusableMethods.scroolDowntoPixel(300);
-        hepsiBuradaPages.ilkUrun.click();
-        Set<String> windowHandlesSet = Driver.getDriver().getWindowHandles();
-        for (String each : windowHandlesSet
-        ) {
-            if (each != ilkSayfaWindowHandle) {
-                Driver.getDriver().switchTo().window(each);
-            }
-        }
-        String urunAdi = hepsiBuradaPages.urunAdiText.getText();
-        hepsiBuradaPages.cerezKabulEt.click();
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.sepeteEkleList.get(0), 5);
+        HepsiBuradaAllPages elements= new HepsiBuradaAllPages();
+        elements.mainPage().kayitsizKullaniciGirisi();
+        elements.mainPage().hepsiBuradaArama("kalem");
+
+        Log.info("Kayitsiz kullanici olarak giris yapildi");
+
+        Log.info("Kalem kelimesi arandi");
+
+        elements.aramaSonucuPage().ilkUrun.click();
+        Log.info("Ilk urune tiklandi");
+
+        ReusableMethods.switchWindow();
+
+        String urunAdi = elements.aramaSonucuPage().urunAdiText.getText();
         ReusableMethods.scroolDowntoPixel(800);
-        hepsiBuradaPages.sepeteEkleList.get(0).click();
-        ReusableMethods.waitForClickablility(hepsiBuradaPages.sepeteEkleList.get(1), 10);
-        hepsiBuradaPages.sepeteEkleList.get(1).click();
 
-        hepsiBuradaPages.sepetimButonu.click();
+       elements.aramaSonucuPage().sepeteEkle1.click();
+        //ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteEkleList.get(1),10);
+ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteGitButonu,10);
+elements.aramaSonucuPage().popupKapat.click();
+        elements.aramaSonucuPage().sepeteEkle2.click();
 
-        String sepettekiIlkUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(0).getText();
-        String sepettekiIkinciUrunText = hepsiBuradaPages.sepettekiUrunlerList.get(1).getText();
-        assertTrue(sepettekiIlkUrunText.contains(urunAdi) && sepettekiIkinciUrunText.contains(urunAdi));
+        Log.info("Sepete eklenen urunun texti alindi");
+
+        elements.aramaSonucuPage().sepetimButonu.click();
+        Log.info("Sepete Gidildi");
+        Log.info(HepsiBuradaAllPages.
+                assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
+                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
         Driver.getDriver().quit();
-        Log.info("Sayfa kapatildi");
+        Log.info("Cikis yapildi");
     }
 }

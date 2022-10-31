@@ -5,19 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.List;
+public class HepsiBuradaMainPage {
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
-public class HepsiBuradaPages {
-
-    public HepsiBuradaPages() {
+    HepsiBuradaMainPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -42,26 +36,14 @@ public class HepsiBuradaPages {
     @FindBy(xpath = "//button[@name='btnEmailSelect']")
     public WebElement getGirisButonuSon;
 
-    @FindBy(xpath = "//div[@role='combobox']")
+    @FindBy(xpath = "//div[@class='desktopOldAutosuggestTheme-DgkZjXtKHeqy6zTL8GSA']")
     public WebElement aramaKutusu;
 
-    @FindBy(xpath = "//li[@id='i0']")
-    public WebElement ilkUrun;
+    @FindBy(xpath = "//div[@class='SearchBoxOld-cHxjyU99nxdIaAbGyX7F']")
+    public WebElement aramaKutusuEnterButonu;
 
-    @FindBy(xpath = "//button[@class='add-to-basket button small']")
-    public List<WebElement> sepeteEkleList;
-
-    @FindBy(xpath = "//*[text()='Sepetim']")
-    public WebElement sepetimButonu;
-
-    @FindBy(xpath = "//h1")
-    public WebElement urunAdiText;
-
-    @FindBy(xpath = "//div[@class='product_name_3Lh3t']")
-    public List<WebElement> sepettekiUrunlerList;
-
-    public static void hepsiBuradaKayitliKullaniciGiris() {
-        HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
+    public void hepsiBuradaKayitliKullaniciGiris() {
+        HepsiBuradaMainPage hepsiBuradaPages = new HepsiBuradaMainPage();
         Actions actions = new Actions(Driver.getDriver());
         Driver.getDriver().get(ConfigReader.getProperty("hepsiburadaUrl"));
         hepsiBuradaPages.cerezKabulEt.click();
@@ -73,29 +55,20 @@ public class HepsiBuradaPages {
         hepsiBuradaPages.getGirisButonuSon.click();
     }
 
-    public static String assertEquals(Boolean condition) {
-        String sonuc = "";
+    public void hepsiBuradaArama(String aranacakUrun) {
+        HepsiBuradaMainPage hepsiBuradaMainPage = new HepsiBuradaMainPage();
+        ReusableMethods.waitForVisibility(hepsiBuradaMainPage.aramaKutusu, 10);
+        hepsiBuradaMainPage.aramaKutusu.click();
 
-        try {
-            assertTrue(condition);
-            sonuc = "Expected ve Actual sonuc eslesti.";
-        } catch (Error e) {
-            sonuc = "Expected ve Actual sonuc malesef eslesmedi";
-        }
+        hepsiBuradaMainPage.aramaKutusu.sendKeys(aranacakUrun);
+        hepsiBuradaMainPage.aramaKutusuEnterButonu.click();
 
-        return sonuc;
     }
 
-    public static void hepsiBuradaArama(String aranacakUrun) {
-        HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
-        hepsiBuradaPages.aramaKutusu.click();
-        hepsiBuradaPages.aramaKutusu.sendKeys(aranacakUrun, Keys.ENTER);
-    }
-
-    public static void elemntWaitAndClick(WebElement elemnt) {
-        HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
-        ReusableMethods.waitForClickablility(elemnt, 5);
-        elemnt.click();
+    public void kayitsizKullaniciGirisi() {
+        HepsiBuradaMainPage hepsiBuradaPages = new HepsiBuradaMainPage();
+        Driver.getDriver().get(ConfigReader.getProperty("hepsiburadaUrl"));
+        hepsiBuradaPages.cerezKabulEt.click();
 
     }
 }

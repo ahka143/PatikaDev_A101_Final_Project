@@ -54,6 +54,12 @@ public class ReusableMethods {
             }
         }
     }
+
+    public static void elemntWaitAndClick(WebElement elemnt) {
+        ReusableMethods.waitForVisibility(elemnt, 10);
+        elemnt.click();
+
+    }
     //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());

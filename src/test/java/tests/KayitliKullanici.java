@@ -2,43 +2,41 @@ package tests;
 
 
 import org.testng.annotations.Test;
-import pages.HepsiBuradaPages;
+import pages.HepsiBuradaAllPages;
 import utilities.Driver;
 import utilities.Log;
 import utilities.ReusableMethods;
-
-import static org.testng.Assert.*;
 
 public class KayitliKullanici {
 
 
     @Test
     public void kayitliKullaniciTest() {
-        HepsiBuradaPages hepsiBuradaPages = new HepsiBuradaPages();
+        HepsiBuradaAllPages elements= new HepsiBuradaAllPages();
 
-        HepsiBuradaPages.hepsiBuradaKayitliKullaniciGiris();
-        Log.info(HepsiBuradaPages.assertEquals(hepsiBuradaPages.girisButonu.getText().equals("Hesabim")));
+        elements.mainPage().hepsiBuradaKayitliKullaniciGiris();
+        Log.info(HepsiBuradaAllPages.assertEquals(elements.mainPage().girisButonu.getText().equals("Hesabim")));
         Log.info("Kayitli kullanici hesabina basariyla giris yapildi");
 
-        HepsiBuradaPages.hepsiBuradaArama("kalem");
+        elements.mainPage().hepsiBuradaArama("kalem");
         Log.info("Kalem kelimesi arandi");
 
-        hepsiBuradaPages.ilkUrun.click();
+        elements.aramaSonucuPage().ilkUrun.click();
         Log.info("Ilk urune tiklandi");
 
         ReusableMethods.switchWindow();
 
-        String urunAdi = hepsiBuradaPages.urunAdiText.getText();
-        HepsiBuradaPages.elemntWaitAndClick(hepsiBuradaPages.sepeteEkleList.get(0));
-        HepsiBuradaPages.elemntWaitAndClick(hepsiBuradaPages.sepeteEkleList.get(1));
+        String urunAdi = elements.aramaSonucuPage().urunAdiText.getText();
+        ReusableMethods.elemntWaitAndClick(elements.aramaSonucuPage().sepeteEkle1);
+        ReusableMethods.elemntWaitAndClick(elements.aramaSonucuPage().sepeteEkle2);
 
-        String sepettekiIlkUrunText = hepsiBuradaPages.sepeteEkleList.get(0).getText();
-        String sepettekiIkinciUrunText = hepsiBuradaPages.sepeteEkleList.get(1).getText();
+
         Log.info("Sepete eklenen urunun texti alindi");
-        hepsiBuradaPages.sepetimButonu.click();
+        elements.aramaSonucuPage().sepetimButonu.click();
         Log.info("Sepete Gidildi");
-        Log.info(HepsiBuradaPages.
-                assertEquals(sepettekiIlkUrunText.contains(urunAdi) && sepettekiIkinciUrunText.contains(urunAdi)));
+        Log.info(HepsiBuradaAllPages.
+                assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
+                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
         Driver.getDriver().quit();
         Log.info("Cikis yapildi");
 
