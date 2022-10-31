@@ -37,6 +37,7 @@ public class KayitliKullanici {
         Log.info(HepsiBuradaAllPages.
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
                         elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
+        Driver.getDriver().manage().deleteAllCookies();
         Driver.getDriver().quit();
         Log.info("Cikis yapildi");
 
