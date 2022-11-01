@@ -1,9 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Tum testleri calistirma" parallel="classes" thread-count="2">
+<suite name="Tum testleri calistirma" >
    <test name="Tum testler">
        <classes>
            <class name="tests.KayitsizKullanici"></class>
-           <class name="tests.KayitliKullanici"></class>
        </classes>
    </test>
 </suite>

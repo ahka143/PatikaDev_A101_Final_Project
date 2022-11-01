@@ -613,3 +613,117 @@
 2022-11-02 00:03:08 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
 2022-11-02 00:03:09 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
 2022-11-02 00:03:10 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:05:24 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:05:25 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:05:25 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:05:55 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:05:55 INFO  Log:36 - !!!!!Kayitli kullanici hesabina basariyla giris yapildi!!!!
+2022-11-02 00:05:56 INFO  Log:36 - !!!!!Kalem kelimesi arandi!!!!
+2022-11-02 00:06:05 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:06:09 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:06:25 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:06:26 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:06:27 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:08:02 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:08:03 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:08:03 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:08:32 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:08:32 INFO  Log:36 - !!!!!Kayitli kullanici hesabina basariyla giris yapildi!!!!
+2022-11-02 00:08:35 INFO  Log:36 - !!!!!Kalem kelimesi arandi!!!!
+2022-11-02 00:08:51 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:09:03 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:09:21 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:09:26 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:09:26 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:12:07 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:12:08 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:12:08 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:12:17 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:12:23 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:12:28 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:12:31 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:13:53 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:13:54 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:13:54 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:14:04 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:14:10 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:14:15 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:14:22 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:14:23 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:14:23 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:16:36 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\IdeaProjects\PatikaDev_A101_Final_Project\src\TumTestleriCalistirma.xml
+
+2022-11-02 00:16:37 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:16:37 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:16:37 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:16:37 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:22:36 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\IdeaProjects\PatikaDev_A101_Final_Project\src\TumTestleriCalistirma.xml
+
+2022-11-02 00:22:37 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:22:37 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:22:54 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:23:02 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:23:20 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:24:29 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:24:30 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:24:30 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:25:10 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:25:11 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:25:11 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:25:40 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:25:41 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:25:41 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:25:55 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:26:01 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:26:11 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:26:24 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:26:25 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:26:26 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:26:44 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:26:45 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:26:45 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:27:49 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\IdeaProjects\PatikaDev_A101_Final_Project\src\TumTestleriCalistirma.xml
+
+2022-11-02 00:27:50 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:27:50 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:27:59 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:28:05 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:28:09 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:28:18 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:28:19 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:28:20 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:33:10 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:33:13 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:33:13 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe
+2022-11-02 00:33:27 INFO  Log:36 - !!!!!calgon kelimesi arandi!!!!
+2022-11-02 00:33:33 INFO  Log:36 - !!!!!Ilk urune tiklandi!!!!
+2022-11-02 00:33:40 INFO  Log:36 - !!!!!Sepete eklenen urunun texti alindi!!!!
+2022-11-02 00:33:50 INFO  Log:36 - !!!!!Sepete Gidildi!!!!
+2022-11-02 00:33:51 INFO  Log:36 - !!!!!Expected ve Actual sonuc eslesti.!!!!
+2022-11-02 00:33:52 INFO  Log:36 - !!!!!Cikis yapildi!!!!
+2022-11-02 00:36:53 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\ahka1\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-02 00:36:54 INFO  WebDriverManager:1237 - Using chromedriver 106.0.5249.61 (resolved driver for Chrome 106)
+2022-11-02 00:36:54 INFO  WebDriverManager:1290 - Exporting webdriver.chrome.driver as C:\Users\ahka1\.cache\selenium\chromedriver\win32\106.0.5249.61\chromedriver.exe

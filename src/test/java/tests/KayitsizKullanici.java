@@ -13,17 +13,15 @@ import java.util.Set;
 import static org.testng.Assert.assertTrue;
 
 public class KayitsizKullanici {
+    HepsiBuradaAllPages elements;
 
     @Test
     public void kayitsizKullaniciTest() {
 
-        HepsiBuradaAllPages elements = new HepsiBuradaAllPages();
+        elements = new HepsiBuradaAllPages();
         elements.mainPage().kayitsizKullaniciGirisi();
-        elements.mainPage().hepsiBuradaArama("kalem");
-
-        Log.info("Kayitsiz kullanici olarak giris yapildi");
-
-        Log.info("Kalem kelimesi arandi");
+        elements.mainPage().hepsiBuradaArama("calgon");
+        Log.info("calgon kelimesi arandi");
 
         elements.aramaSonucuPage().ilkUrun.click();
         Log.info("Ilk urune tiklandi");
@@ -33,22 +31,13 @@ public class KayitsizKullanici {
         String urunAdi = elements.aramaSonucuPage().urunAdiText.getText();
         Log.info("Sepete eklenen urunun texti alindi");
 
-        ReusableMethods.scroolDowntoPixel(800);
-        elements.aramaSonucuPage().sepeteEkle1.click();
-        ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteGitButonu, 10);
-        elements.aramaSonucuPage().popupKapat.click();
-
-
-
-
-
+        elements.aramaSonucuPage().farkliSaticilardanUrunEkleme();
         elements.aramaSonucuPage().sepetimButonu.click();
         Log.info("Sepete Gidildi");
         Log.info(HepsiBuradaAllPages.
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
                         elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
-        Driver.getDriver().manage().deleteAllCookies();
-        //Driver.getDriver().quit();
+        Driver.getDriver().quit();
         Log.info("Cikis yapildi");
     }
 }
