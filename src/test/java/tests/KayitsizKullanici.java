@@ -17,7 +17,7 @@ public class KayitsizKullanici {
     @Test
     public void kayitsizKullaniciTest() {
 
-        HepsiBuradaAllPages elements= new HepsiBuradaAllPages();
+        HepsiBuradaAllPages elements = new HepsiBuradaAllPages();
         elements.mainPage().kayitsizKullaniciGirisi();
         elements.mainPage().hepsiBuradaArama("kalem");
 
@@ -31,15 +31,16 @@ public class KayitsizKullanici {
         ReusableMethods.switchWindow();
 
         String urunAdi = elements.aramaSonucuPage().urunAdiText.getText();
-        ReusableMethods.scroolDowntoPixel(800);
-
-       elements.aramaSonucuPage().sepeteEkle1.click();
-        //ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteEkleList.get(1),10);
-ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteGitButonu,10);
-elements.aramaSonucuPage().popupKapat.click();
-        elements.aramaSonucuPage().sepeteEkle2.click();
-
         Log.info("Sepete eklenen urunun texti alindi");
+
+        ReusableMethods.scroolDowntoPixel(800);
+        elements.aramaSonucuPage().sepeteEkle1.click();
+        ReusableMethods.waitForVisibility(elements.aramaSonucuPage().sepeteGitButonu, 10);
+        elements.aramaSonucuPage().popupKapat.click();
+
+
+
+
 
         elements.aramaSonucuPage().sepetimButonu.click();
         Log.info("Sepete Gidildi");
@@ -47,7 +48,7 @@ elements.aramaSonucuPage().popupKapat.click();
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
                         elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
         Driver.getDriver().manage().deleteAllCookies();
-        Driver.getDriver().quit();
+        //Driver.getDriver().quit();
         Log.info("Cikis yapildi");
     }
 }

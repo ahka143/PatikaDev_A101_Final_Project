@@ -57,8 +57,7 @@ public class ReusableMethods {
 
     public static void elemntWaitAndClick(WebElement elemnt) {
         ReusableMethods.waitForVisibility(elemnt, 10);
-        elemnt.click();
-
+       ReusableMethods.jsClick(elemnt);
     }
     //========Hover Over=====//
     public static void hover(WebElement element) {

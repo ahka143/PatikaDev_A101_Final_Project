@@ -16,10 +16,14 @@ public class HepsiBuradaAramaSonucuPage {
     @FindBy(xpath = "//li[@id='i0']")
     public WebElement ilkUrun;
 
-    @FindBy(xpath = "(//div[@class='addToCart'])[1]")
+    @FindBy(xpath = "//span[@class='addToCartButton']")
+    public WebElement sepeteEkleButonu;
+
+    @FindBy(xpath = "(//button[@class='add-to-basket button small'])[1]")
     public WebElement sepeteEkle1;
-    @FindBy(xpath = "(//div[@class='addToCart'])[2]")
+    @FindBy(xpath = "(//button[@class='add-to-basket button small'])[2]")
     public WebElement sepeteEkle2;
+
 
     @FindBy(xpath = "//*[text()='Sepetim']")
     public WebElement sepetimButonu;
@@ -32,4 +36,10 @@ public class HepsiBuradaAramaSonucuPage {
 
     @FindBy(xpath = "//a[@class='checkoutui-Modal-2iZXl']")
     public WebElement popupKapat;
+
+    @FindBy(partialLinkText = "Tümü")
+    public WebElement tumuButton;
+
+    @FindBy(xpath = "//button[@class='add-to-basket button']")
+    public List<WebElement> sepeteEkleList;
 }
