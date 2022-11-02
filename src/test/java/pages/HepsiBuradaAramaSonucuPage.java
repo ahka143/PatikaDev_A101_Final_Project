@@ -10,8 +10,8 @@ import java.util.List;
 
 public class HepsiBuradaAramaSonucuPage {
 
-    public HepsiBuradaAramaSonucuPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public HepsiBuradaAramaSonucuPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//li[@id='i0']")
@@ -35,18 +35,12 @@ public class HepsiBuradaAramaSonucuPage {
     @FindBy(xpath = "//*[text()='Sepete git']")
     public WebElement sepeteGitButonu;
 
-    @FindBy(xpath = "//a[@class='checkoutui-Modal-2iZXl']")
+    @FindBy(xpath = "//h1//a")
     public WebElement popupKapat;
 
-    @FindBy(partialLinkText = "Tümü")
-    public WebElement tumuButton;
 
-    @FindBy(xpath = "//button[@class='add-to-basket button']")
-    public List<WebElement> sepeteEkleList;
-
-
-    public  void farkliSaticilardanUrunEkleme(){
-        HepsiBuradaAramaSonucuPage hepsiBuradaAramaSonucuPage=new HepsiBuradaAramaSonucuPage();
+    public void farkliSaticilardanUrunEkleme() {
+        HepsiBuradaAramaSonucuPage hepsiBuradaAramaSonucuPage = new HepsiBuradaAramaSonucuPage();
         hepsiBuradaAramaSonucuPage.sepeteEkleButonu.click();
         ReusableMethods.elemntWaitAndClick(hepsiBuradaAramaSonucuPage.popupKapat);
         ReusableMethods.scroolDowntoPixel(800);

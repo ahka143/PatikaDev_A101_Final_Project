@@ -21,8 +21,6 @@ public class KayitsizKullanici {
         elements = new HepsiBuradaAllPages();
         elements.mainPage().kayitsizKullaniciGirisi();
         elements.mainPage().hepsiBuradaArama("calgon");
-        Log.info("calgon kelimesi arandi");
-
         elements.aramaSonucuPage().ilkUrun.click();
         Log.info("Ilk urune tiklandi");
 

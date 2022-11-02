@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.Log;
 import utilities.ReusableMethods;
 
 public class HepsiBuradaMainPage {
@@ -62,6 +63,7 @@ public class HepsiBuradaMainPage {
 
         hepsiBuradaMainPage.aramaKutusu.sendKeys(aranacakUrun);
         hepsiBuradaMainPage.aramaKutusuEnterButonu.click();
+        Log.info(aranacakUrun+" kelimesi arandi");
 
     }
 
@@ -71,4 +73,6 @@ public class HepsiBuradaMainPage {
         hepsiBuradaPages.cerezKabulEt.click();
 
     }
+
+
 }

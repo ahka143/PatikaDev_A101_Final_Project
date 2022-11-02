@@ -20,6 +20,7 @@ public class Driver {
             switch (ConfigReader.getProperty("browser")){
                 case "chrome" :
                     ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--disable-notifications");
                     options.addArguments("--disable-blink-features");
                     options.addArguments("--disable-blink-features=AutomationControlled");
                     options.addArguments("--disable-extensions");
@@ -46,6 +47,13 @@ public class Driver {
     public static WebDriver closeDriver(){
         if (driver!=null){
             driver.close();
+            driver=null;
+        }
+        return driver;
+    }
+    public static WebDriver quitDriver(){
+        if (driver!=null){
+            driver.quit();
             driver=null;
         }
         return driver;

@@ -3,6 +3,7 @@
    <test name="Tum testler">
        <classes>
            <class name="tests.KayitsizKullanici"></class>
+           <class name="tests.KayitliKullanici"></class>
        </classes>
    </test>
 </suite>

@@ -19,7 +19,6 @@ public class KayitliKullanici {
         Log.info("Kayitli kullanici hesabina basariyla giris yapildi");
 
         elements.mainPage().hepsiBuradaArama("calgon");
-        Log.info("calgon kelimesi arandi");
 
         elements.aramaSonucuPage().ilkUrun.click();
         Log.info("Ilk urune tiklandi");
@@ -37,11 +36,11 @@ public class KayitliKullanici {
         Log.info(HepsiBuradaAllPages.
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
                         elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
-        Driver.getDriver().manage().deleteAllCookies();
         Driver.getDriver().quit();
         Log.info("Cikis yapildi");
 
     }
+
 
 
 }
