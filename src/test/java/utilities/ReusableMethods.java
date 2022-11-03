@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
+import static org.testng.Assert.assertTrue;
+
 public class ReusableMethods {
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
@@ -168,7 +170,18 @@ public class ReusableMethods {
         jse.executeScript("arguments[0].click();", element);
     }
 
+    public static void assertEquals(Boolean condition) {
+        String sonuc = "";
 
+        try {
+            assertTrue(condition);
+            Log.info("Expected ve Actual sonuc eslesti.");
+        } catch (Error e) {
+            Log.error("Expected ve Actual sonuc malesef eslesmedi");
+        }
+
+
+    }
 
 
 }

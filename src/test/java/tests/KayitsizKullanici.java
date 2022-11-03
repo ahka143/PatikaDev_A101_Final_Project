@@ -1,9 +1,9 @@
 package tests;
 
-import org.openqa.selenium.Keys;
+
 import org.testng.annotations.Test;
 import pages.HepsiBuradaAllPages;
-import utilities.ConfigReader;
+
 import utilities.Driver;
 import utilities.Log;
 import utilities.ReusableMethods;
@@ -19,8 +19,12 @@ public class KayitsizKullanici {
     public void kayitsizKullaniciTest() {
 
         elements = new HepsiBuradaAllPages();
+
         elements.mainPage().kayitsizKullaniciGirisi();
+        Log.info("Kayitsiz kullanici olarak giris yapildi");
+
         elements.mainPage().hepsiBuradaArama("calgon");
+
         elements.aramaSonucuPage().ilkUrun.click();
         Log.info("Ilk urune tiklandi");
 
@@ -30,12 +34,15 @@ public class KayitsizKullanici {
         Log.info("Sepete eklenen urunun texti alindi");
 
         elements.aramaSonucuPage().farkliSaticilardanUrunEkleme();
+
         elements.aramaSonucuPage().sepetimButonu.click();
+
         Log.info("Sepete Gidildi");
-        Log.info(HepsiBuradaAllPages.
+        ReusableMethods.
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
-                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
-        Driver.getDriver().quit();
+                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi));
+
+        Driver.quitDriver();
         Log.info("Cikis yapildi");
     }
 }

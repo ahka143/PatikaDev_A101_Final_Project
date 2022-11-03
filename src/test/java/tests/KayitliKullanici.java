@@ -12,10 +12,11 @@ public class KayitliKullanici {
 
     @Test
     public void kayitliKullaniciTest() {
-         elements = new HepsiBuradaAllPages();
+        elements = new HepsiBuradaAllPages();
 
         elements.mainPage().hepsiBuradaKayitliKullaniciGiris();
-        Log.info(HepsiBuradaAllPages.assertEquals(elements.mainPage().girisButonu.getText().equals("Hesabım")));
+
+        ReusableMethods.assertEquals(elements.mainPage().girisButonu.getText().equals("Hesabım"));
         Log.info("Kayitli kullanici hesabina basariyla giris yapildi");
 
         elements.mainPage().hepsiBuradaArama("calgon");
@@ -28,19 +29,19 @@ public class KayitliKullanici {
         String urunAdi = elements.aramaSonucuPage().urunAdiText.getText();
         Log.info("Sepete eklenen urunun texti alindi");
 
-       elements.aramaSonucuPage().farkliSaticilardanUrunEkleme();
-
+        elements.aramaSonucuPage().farkliSaticilardanUrunEkleme();
 
         elements.aramaSonucuPage().sepetimButonu.click();
         Log.info("Sepete Gidildi");
-        Log.info(HepsiBuradaAllPages.
+
+        ReusableMethods.
                 assertEquals(elements.sepetimPage().sepettekiUrunlerList.get(0).getText().contains(urunAdi) &&
-                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi)));
-        Driver.getDriver().quit();
+                        elements.sepetimPage().sepettekiUrunlerList.get(1).getText().contains(urunAdi));
+
+        Driver.quitDriver();
         Log.info("Cikis yapildi");
 
     }
-
 
 
 }

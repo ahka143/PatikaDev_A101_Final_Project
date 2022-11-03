@@ -1,16 +1,6 @@
 package pages;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
-import utilities.ReusableMethods;
 
-import java.util.List;
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class HepsiBuradaAllPages {
 
@@ -58,18 +48,7 @@ public class HepsiBuradaAllPages {
 
 
 
-    public static String assertEquals(Boolean condition) {
-        String sonuc = "";
 
-        try {
-            assertTrue(condition);
-            sonuc = "Expected ve Actual sonuc eslesti.";
-        } catch (Error e) {
-            sonuc = "Expected ve Actual sonuc malesef eslesmedi";
-        }
-
-        return sonuc;
-    }
 
 
 

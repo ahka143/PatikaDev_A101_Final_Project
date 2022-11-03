@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.List;
+
 
 public class HepsiBuradaAramaSonucuPage {
 
@@ -22,8 +22,6 @@ public class HepsiBuradaAramaSonucuPage {
 
     @FindBy(xpath = "(//button[@class='add-to-basket button small'])[1]")
     public WebElement sepeteEkle1;
-    @FindBy(xpath = "(//button[@class='add-to-basket button small'])[2]")
-    public WebElement sepeteEkle2;
 
 
     @FindBy(xpath = "//*[text()='Sepetim']")
@@ -32,8 +30,6 @@ public class HepsiBuradaAramaSonucuPage {
     @FindBy(xpath = "//h1")
     public WebElement urunAdiText;
 
-    @FindBy(xpath = "//*[text()='Sepete git']")
-    public WebElement sepeteGitButonu;
 
     @FindBy(xpath = "//h1//a")
     public WebElement popupKapat;
