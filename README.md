@@ -1,6 +1,6 @@
 # PatikaDev_A101_Final_Project
 
-Proje   Page Object Model prensiplerine uygun olarak  ve TestNG frameWork'uyle build edildi.
+Proje   **_Page Object Model_** prensiplerine uygun olarak  ve TestNG frameWork'uyle build edildi.
 Loglama yontemi olarak slf4j kullanildi.
 
 Testin yapildigi her sayfa icin gerekli elementler ve o sayfa ile ilgili reusable methodlar icin ayri ayri page class'lari olusturuldu. Bu classlardan element ve method cagirmak icin olusturulmasi gereken nesne sayisi cok olacakti. Bu yuzden  butun page'lere ulasabilmek icin bir tane  allPages class'i olusturup buraya her page ulasmak icin methodlar olusturdum. Ardindan test class'imda olusturdugum tek bir allPages objesiyle istedigim page class'ina ulasma sansi elde ettim.
